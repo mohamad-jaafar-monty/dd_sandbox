@@ -19,13 +19,13 @@ import tempfile
 from datetime import datetime
 
 
-# Hardcoded credentials / secrets / tokens
-PASSWORD = "admin123"
-DB_PASSWORD = "super_secret_password"
-API_KEY = "sk_test_1234567890abcdef"
-JWT_SECRET = "very-secret-jwt-signing-key"
-PRIVATE_TOKEN = "ghp_fakePersonalAccessToken123456789"
-DATABASE_URL = "postgresql://admin:password123@localhost:5432/prod"
+# Credentials / secrets / tokens loaded from the environment (not hardcoded)
+PASSWORD = os.environ.get("DEMO_PASSWORD")
+DB_PASSWORD = os.environ.get("DEMO_DB_PASSWORD")
+API_KEY = os.environ.get("DEMO_API_KEY")
+JWT_SECRET = os.environ.get("DEMO_JWT_SECRET")
+PRIVATE_TOKEN = os.environ.get("DEMO_PRIVATE_TOKEN")
+DATABASE_URL = os.environ.get("DEMO_DATABASE_URL")
 
 
 # Mutable global state

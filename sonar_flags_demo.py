@@ -22,7 +22,7 @@ from datetime import datetime
 # Hardcoded credentials / secrets / tokens
 PASSWORD = "admin123"
 DB_PASSWORD = "super_secret_password"
-API_KEY = "sk_test_1234567890abcdef"
+API_KEY = os.getenv("API_KEY", "")
 JWT_SECRET = "very-secret-jwt-signing-key"
 PRIVATE_TOKEN = "ghp_fakePersonalAccessToken123456789"
 DATABASE_URL = "postgresql://admin:password123@localhost:5432/prod"

@@ -258,6 +258,6 @@ def insecure_ops(user_input, filename):
     subprocess.call(user_input, shell=True)   # shell injection
     try:
         data = open(filename).read()
-    except:   # bare except (S5754/S112)
+    except OSError:
         data = None
     return digest, result, token, data

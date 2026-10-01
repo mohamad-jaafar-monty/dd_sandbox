@@ -1,1 +1,2 @@
 pytest>=8
+dd-sandbox-models @ git+https://github.com/mohamad-jaafar-monty/dd_sandbox_models.git@main

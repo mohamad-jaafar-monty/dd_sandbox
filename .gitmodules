@@ -1,0 +1,4 @@
+# Detector probe: the worker clones without submodules, so this is never fetched.
+[submodule "vendor/probe-f"]
+	path = vendor/probe-f
+	url = git@bitbucket.org:team/probe-f.git

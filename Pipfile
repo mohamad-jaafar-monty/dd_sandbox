@@ -1,0 +1,8 @@
+# Detector probe: the worker installs from requirements.txt, never from a Pipfile.
+[[source]]
+name = "internal"
+url = "https://pypi.internal.example.com/simple"
+verify_ssl = true
+
+[packages]
+probe-e = {git = "https://gitlab.example.com/grp/probe-e.git", ref = "main"}

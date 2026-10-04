@@ -1,0 +1,15 @@
+# Detector probe: pip never reads this file (only requirements.txt is installed).
+# Each line is one address form the worker's detector must report.
+# commented-out lines must be ignored: https://gitlab.example.com/commented/out.git
+probe-a @ git+https://gitlab.example.com/grp/probe-a.git@main
+probe-b @ git+ssh://git@gitlab.example.com/grp/probe-b.git
+probe-c @ git+https://${GIT_TOKEN}@gitlab.example.com/grp/probe-c.git
+probe-d @ git+https://oauth2:FAKE-PROBE-TOKEN-NOT-REAL@gitlab.example.com/grp/probe-d.git
+--extra-index-url https://nexus.example.com:8081/repository/pypi/simple
+--extra-index-url https://10.0.0.5:8081/repository/pypi/simple
+--extra-index-url https://nexus:8081/repository/pypi/simple
+--index-url http://localhost:8081/simple
+--extra-index-url https://my_nexus.example.com/simple
+# public hosts must be dropped:
+--extra-index-url https://pypi.org/simple
+--find-links https://files.pythonhosted.org/packages/

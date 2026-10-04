@@ -1,7 +1,7 @@
 # dd_sandbox
 ## Detector probe
 
-The files below exist only to exercise the DevDox coverage scan's private-source detector. None of them is used by the install: the worker installs from `requirements.txt` alone, clones without submodules, and never runs tox, make or GitLab CI. A coverage scan of this repository must pause and list these cards, one per address (the same address in two files is one card):
+The files below exist only to exercise the DevDox coverage scan's private-source detector. None of them is used by the install: the worker installs from `requirements.txt` alone, clones without submodules, and never runs tox, make or GitLab CI. A coverage scan of this repository must pause and list 21 cards, one per address (the same address in two files is one card):
 
 | File | Form | Expected card |
 |---|---|---|
@@ -23,8 +23,7 @@ The files below exist only to exercise the DevDox coverage scan's private-source
 | Makefile | `${CI_JOB_TOKEN}` placeholder | gitlab.example.com/grp/probe-g |
 | .gitlab-ci.yml | token placeholder on a registry URL | gitlab.example.com/api/v4/projects/123/packages/pypi/simple |
 | .gitlab-ci.yml | `github:org/repo` shorthand | github.com/acme/probe-i |
-| .npmrc | npm registry | npm.example.com, Not supported yet (no injector for npm) |
-| .npmrc | `//host/:_authToken=${NPM_TOKEN}` | npm.example.com, code expects `${NPM_TOKEN}` |
+| .npmrc | npm registry and `//host/:_authToken=${NPM_TOKEN}` | one card, npm.example.com, code expects `${NPM_TOKEN}` |
 | go.mod | Go module path | gitlab.example.com/grp/probe-j and github.com/acme/probe-k |
 
 Must not appear: `pypi.org`, `files.pythonhosted.org`, `golang.org/x/text`, and the commented-out line in requirements-detector-probe.txt.
